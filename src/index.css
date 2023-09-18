@@ -11,3 +11,43 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.page-container{
+  height: 100vh;
+}
+
+.flex{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: aliceblue;
+}
+.card{
+  height: 250px;
+  width: 450px;
+  border: none;
+  border-radius:10px;
+  gap: 45px;
+  background-image: url('c:\Users\HP\Downloads\agewithname.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.form{
+  flex-direction: column;
+  gap: 20px;
+}
+.form>*{
+  padding: 15px;
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 15px;
+}
+.form button{
+  background-color: lightseagreen;
+  color: black;
+  border: none;
+}
+.form input{
+  border: 1px solid lightskyblue;
+  border: none;
+}

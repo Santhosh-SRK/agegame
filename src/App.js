@@ -1,24 +1,39 @@
-import logo from './logo.svg';
-import './App.css';
 
+import './App.css';
+import {useState} from "react";
 function App() {
+  const [text,setText]=useState("");
+  const[age,setAge]= useState("");
+  const[cache,setCache]=useState("")
+   const handlesubmit=async()=>{
+    try{
+      if(cache.hasOwnProperty(text)){
+        setAge(cache[text]);
+        console.log("cache")
+      }else{
+        console.log("Api")
+     const response= await fetch(`https://api.agify.io/?name=${text}`)
+     const value=await response.json()
+     setCache({...App.cache,[text]: value.age})
+     console.log(value)
+     setAge(value.age)
+      }
+    }catch{
+      console.log("api error")
+    }
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <>
+    <div className="page-container flex">
+      <div className="card flex">
+        <div className="form flex">
+          <input placeholder='Enter a Name' value={text} onChange={(event)=>setText(event.target.value)}/>
+          <button onClick={handlesubmit }>Sumbit</button>
+        </div>
+        <h1>{age ??"Not-Valid"}</h1>
+      </div>
     </div>
+    </>
   );
 }
 
