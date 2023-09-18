@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/agegame/static/css/main.a1e8873e.css",
+    "main.js": "/agegame/static/js/main.2d4b27f7.js",
+    "static/js/787.3c5fa82a.chunk.js": "/agegame/static/js/787.3c5fa82a.chunk.js",
+    "static/media/agewithname.jpg": "/agegame/static/media/agewithname.14481dfb06d7dc927ac6.jpg",
+    "index.html": "/agegame/index.html",
+    "main.a1e8873e.css.map": "/agegame/static/css/main.a1e8873e.css.map",
+    "main.2d4b27f7.js.map": "/agegame/static/js/main.2d4b27f7.js.map",
+    "787.3c5fa82a.chunk.js.map": "/agegame/static/js/787.3c5fa82a.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a1e8873e.css",
+    "static/js/main.2d4b27f7.js"
+  ]
+}
